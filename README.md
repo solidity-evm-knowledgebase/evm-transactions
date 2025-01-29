@@ -17,6 +17,11 @@
    Blob Transactions (EIP-4844) (Proto-Danksharding:
    Introduced in "Dencun" fork - introduced additional fiels: max_blob_fee_per_gas and blob_versioned_hashes
 
+    - max_blob_fee_per_gas: The maximum total fee per gas the sender is willing to pay for blob gas in wei
+    - blob_versioned_hashes: List of versioned blob hashes associated with the transaction's EIP-4844 data blobs.
+
+The actual blob fee is deducted from the sender balance before transaction execution and burned, and is not refunded in case of transaction failure.
+
 ### Type 3 transactions: EIP-4844 (blobs) - Proto-Danksharding:
 
 Blobs: Binary Large Objects
